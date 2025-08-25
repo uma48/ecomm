@@ -20,7 +20,9 @@ export async function POST(request) {
 
     const token = generateToken(user);
     return NextResponse.json({ token, user: { id: user._id, email: user.email, name: user.name } });
-  } catch (error) {
-    return NextResponse.json({ error: 'Server error' }, { status: 500 });
-  }
+} catch (error) {
+  console.error("Login API error:", error);  // ✅ log real error
+  return NextResponse.json({ error: 'Server error' }, { status: 500 });
+}
+
 }
