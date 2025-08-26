@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Slider() {
   // Static image data (paths relative to public folder)
   const images = [
-    '/banner1.webp', // Replace with your image files in public/
+    '/banner1.webp',
     '/banner2.webp',
     '/banner3.webp',
   ];
@@ -28,13 +28,14 @@ export default function Slider() {
       >
         {images.map((src, index) => (
           <div key={index} className="w-full flex-shrink-0">
-            <Image
-              src={src}
-              alt={`Slide ${index + 1}`}
-              width={1200}
-              height={300}
-              className="w-full h-auto object-cover"
-            />
+            <div className="relative w-full h-40 sm:h-52 md:h-64"> {/* Responsive heights */}
+              <Image
+                src={src}
+                alt={`Slide ${index + 1}`}
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         ))}
       </div>

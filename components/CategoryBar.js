@@ -13,7 +13,7 @@ export default function CategoryBar() {
   ];
 
   return (
-    <div className="bg-yellow-100 p-2 flex overflow-x-auto space-x-4">
+    <div className="bg-yellow-100 p-3 mt-3 flex overflow-x-auto space-x-4">
       {categories.map((category) => (
         <Link
           key={category.id}
