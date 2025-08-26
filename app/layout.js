@@ -4,6 +4,9 @@ import CategoryBar from '@/components/CategoryBar';
 import Headers from '@/components/Headers'
 import Slider from '@/components/Slider';
 import FestiveSections from '@/components/FestiveSections';
+import Grocery from '@/components/Grocery';
+import Electronics from '@/components/Electronic';
+import Clothes from '@/components/Clothes';
 
 
 export const metadata = {
@@ -20,6 +23,9 @@ export default function RootLayout({ children }) {
         <CategoryBar />
          <Slider />
          <FestiveSections />
+         <Grocery />
+         <Electronics />
+         <Clothes />
         {children}
       </body>
     </html>
