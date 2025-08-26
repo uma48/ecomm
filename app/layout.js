@@ -1,8 +1,9 @@
-import ProductCard from '@/components/ProductCard';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import CategoryBar from '@/components/CategoryBar';
 import Headers from '@/components/Headers'
+import Slider from '@/components/Slider';
+import FestiveSections from '@/components/FestiveSections';
 
 
 export const metadata = {
@@ -17,6 +18,8 @@ export default function RootLayout({ children }) {
         <Headers />
         <Navbar /> 
         <CategoryBar />
+         <Slider />
+         <FestiveSections />
         {children}
       </body>
     </html>
